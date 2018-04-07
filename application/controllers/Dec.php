@@ -115,7 +115,12 @@ class Dec extends MY_Controller
           if(count($output['datos_totales_unidades']['datos']) > 0 && count($output['datos_totales_unidades_con_programa']['datos'])){
               $t_unidades = floatval($output['datos_totales_unidades']['datos'][0]['total_unidades']);
               $tu_programa = floatval($output['datos_totales_unidades_con_programa']['datos'][0]['total_unidades']);
-              $output['datos_totales_porcentaje'] = round(($tu_programa * 100.0)/$t_unidades,2);
+              if($tu_programa < 1){
+                  $output['datos_totales_porcentaje'] = 0.0;
+              }else{
+                  $output['datos_totales_porcentaje'] = round(($tu_programa * 100.0)/$t_unidades,2);
+              }
+
           }else{
             if(count($output['datos_totales_unidades_con_programa']['datos']) == 0){
               $output['datos_totales_porcentaje'] = 0.0;
@@ -242,7 +247,11 @@ class Dec extends MY_Controller
         if(count($output['datos_totales_unidades']['datos']) > 0 && count($output['datos_totales_unidades_con_programa']['datos'])){
             $t_unidades = floatval($output['datos_totales_unidades']['datos'][0]['total_unidades']);
             $tu_programa = floatval($output['datos_totales_unidades_con_programa']['datos'][0]['total_unidades']);
-            $output['datos_totales_porcentaje'] = round(($tu_programa * 100.0)/$t_unidades,2);
+            if($tu_programa < 1){
+                $output['datos_totales_porcentaje'] = 0.0;
+            }else{
+                $output['datos_totales_porcentaje'] = round(($tu_programa * 100.0)/$t_unidades,2);
+            }
         }else{
           if(count($output['datos_totales_unidades_con_programa']['datos']) == 0){
             $output['datos_totales_porcentaje'] = 0.0;
