@@ -459,8 +459,8 @@ class Dec_model extends CI_Model
                         from catalogos.unidades_instituto UI
                         	left join dec.h_indicadores hi ON(hi.cve_presupuestal = UI.clave_presupuestal)
                         	left join catalogos.programas_proyecto pp ON(pp.id_programa_proyecto = hi.id_programa_proyecto)
-                        where hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']}
-                        group by hi.cve_presupuestal, UI.id_delegacion
+                        where hi.numerador > 0 and hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']}
+                        group by UI.id_delegacion
                         having sum(hi.numerador) > 0");
                         $reporte = $resultado->result_array();
                         $estado['success'] = true;
@@ -475,8 +475,8 @@ class Dec_model extends CI_Model
                           from catalogos.unidades_instituto UI
                           	left join dec.h_indicadores hi ON(hi.cve_presupuestal = UI.clave_presupuestal)
                           	left join catalogos.programas_proyecto pp ON(pp.id_programa_proyecto = hi.id_programa_proyecto)
-                          where hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_tipo_unidad = {$peticion['tipos_unidades']}
-                          group by hi.cve_presupuestal, UI.id_delegacion
+                          where hi.numerador > 0 and hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_tipo_unidad = {$peticion['tipos_unidades']}
+                          group by UI.id_delegacion
                           having sum(hi.numerador) > 0");
                           $reporte = $resultado->result_array();
                           $estado['success'] = true;
@@ -491,8 +491,8 @@ class Dec_model extends CI_Model
                               from catalogos.unidades_instituto UI
                               	left join dec.h_indicadores hi ON(hi.cve_presupuestal = UI.clave_presupuestal)
                               	left join catalogos.programas_proyecto pp ON(pp.id_programa_proyecto = hi.id_programa_proyecto)
-                              where hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_delegacion = {$peticion['id_delegacion']}
-                              group by hi.cve_presupuestal, UI.id_delegacion
+                              where hi.numerador > 0 and hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_delegacion = {$peticion['id_delegacion']}
+                              group by UI.id_delegacion
                               having sum(hi.numerador) > 0");
                               $reporte = $resultado->result_array();
                               $estado['success'] = true;
@@ -508,8 +508,8 @@ class Dec_model extends CI_Model
                                   from catalogos.unidades_instituto UI
                                   	left join dec.h_indicadores hi ON(hi.cve_presupuestal = UI.clave_presupuestal)
                                   	left join catalogos.programas_proyecto pp ON(pp.id_programa_proyecto = hi.id_programa_proyecto)
-                                  where hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_region = {$peticion['id_region']}
-                                  group by hi.cve_presupuestal, UI.id_delegacion
+                                  where hi.numerador > 0 and hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_region = {$peticion['id_region']}
+                                  group UI.id_delegacion
                                   having sum(hi.numerador) > 0");
                                   $reporte = $resultado->result_array();
                                   $estado['success'] = true;
@@ -524,8 +524,8 @@ class Dec_model extends CI_Model
                                     from catalogos.unidades_instituto UI
                                     	left join dec.h_indicadores hi ON(hi.cve_presupuestal = UI.clave_presupuestal)
                                     	left join catalogos.programas_proyecto pp ON(pp.id_programa_proyecto = hi.id_programa_proyecto)
-                                    where hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_region = {$peticion['region']} and UI.id_tipo_unidad = {$peticion['tipos_unidades']}
-                                    group by hi.cve_presupuestal, UI.id_delegacion
+                                    where hi.numerador > 0 and hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_region = {$peticion['region']} and UI.id_tipo_unidad = {$peticion['tipos_unidades']}
+                                    group by UI.id_delegacion
                                     having sum(hi.numerador) > 0");
                                     $reporte = $resultado->result_array();
                                     $estado['success'] = true;
@@ -540,8 +540,8 @@ class Dec_model extends CI_Model
                                         from catalogos.unidades_instituto UI
                                         	left join dec.h_indicadores hi ON(hi.cve_presupuestal = UI.clave_presupuestal)
                                         	left join catalogos.programas_proyecto pp ON(pp.id_programa_proyecto = hi.id_programa_proyecto)
-                                        where hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_region = {$peticion['region']} and UI.id_delegacion = {$peticion['delegacion']}
-                                        group by hi.cve_presupuestal, UI.id_delegacion
+                                        where hi.numerador > 0 and hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_region = {$peticion['region']} and UI.id_delegacion = {$peticion['delegacion']}
+                                        group by UI.id_delegacion
                                         having sum(hi.numerador) > 0");
                                         $reporte = $resultado->result_array();
                                         $estado['success'] = true;
@@ -557,8 +557,8 @@ class Dec_model extends CI_Model
                                             from catalogos.unidades_instituto UI
                                             	left join dec.h_indicadores hi ON(hi.cve_presupuestal = UI.clave_presupuestal)
                                             	left join catalogos.programas_proyecto pp ON(pp.id_programa_proyecto = hi.id_programa_proyecto)
-                                            where hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_tipo_unidad = {$peticion['tipos_unidades']} and UI.id_delegacion = {$peticion['delegacion']}
-                                            group by hi.cve_presupuestal, UI.id_delegacion
+                                            where hi.numerador > 0 and hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_tipo_unidad = {$peticion['tipos_unidades']} and UI.id_delegacion = {$peticion['delegacion']}
+                                            group by UI.id_delegacion
                                             having sum(hi.numerador) > 0");
                                             $reporte = $resultado->result_array();
                                             $estado['success'] = true;
@@ -571,8 +571,8 @@ class Dec_model extends CI_Model
                                             from catalogos.unidades_instituto UI
                                             	left join dec.h_indicadores hi ON(hi.cve_presupuestal = UI.clave_presupuestal)
                                             	left join catalogos.programas_proyecto pp ON(pp.id_programa_proyecto = hi.id_programa_proyecto)
-                                            where hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_region = {$peticion['region']} and UI.id_tipo_unidad = {$peticion['tipos_unidades']} and UI.id_delegacion = {$peticion['delegacion']}
-                                            group by hi.cve_presupuestal, UI.id_delegacion
+                                            where hi.numerador > 0 and hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_region = {$peticion['region']} and UI.id_tipo_unidad = {$peticion['tipos_unidades']} and UI.id_delegacion = {$peticion['delegacion']}
+                                            group by UI.id_delegacion
                                             having sum(hi.numerador) > 0");
                                             $reporte = $resultado->result_array();
                                             $estado['success'] = true;
@@ -594,7 +594,7 @@ class Dec_model extends CI_Model
                     {
                         $resultado = $this->db->query("select count(distinct T.unidad) total_unidades from (select HI.id_programa_proyecto, UI.nombre unidad, HI.cve_presupuestal clave_unidad, sum(HI.numerador) numerador, sum(HI.denominador) denominador from dec.h_indicadores HI
                         inner join catalogos.unidades_instituto UI on UI.clave_presupuestal = HI.cve_presupuestal
-                        where UI.nivel_atencion = 3 and UI.anio = 2017
+                        where hi.numerador > 0 and hi.anio = 2017 and UI.nivel_atencion = 3 and UI.anio = 2017
                         group by HI.cve_presupuestal, UI.nombre, HI.id_programa_proyecto) T
                         where numerador > 0");
                         $reporte = $resultado->result_array();
@@ -605,7 +605,7 @@ class Dec_model extends CI_Model
                     }else{
                         $resultado = $this->db->query("select count(distinct T.unidad) total_unidades from (select HI.id_programa_proyecto, UI.nombre unidad, HI.cve_presupuestal clave_unidad, sum(HI.numerador) numerador, sum(HI.denominador) denominador from dec.h_indicadores HI
                         inner join catalogos.unidades_instituto UI on UI.clave_presupuestal = HI.cve_presupuestal
-                        where UI.nivel_atencion = 3 and UI.anio = 2017 and UI.id_tipo_unidad = {$peticion['tipos_unidades']}
+                        where hi.numerador > 0 and hi.anio = 2017 and UI.nivel_atencion = 3 and UI.anio = 2017 and UI.id_tipo_unidad = {$peticion['tipos_unidades']}
                         group by HI.cve_presupuestal, UI.nombre, HI.id_programa_proyecto) T
                         where numerador > 0");
                         $reporte = $resultado->result_array();
