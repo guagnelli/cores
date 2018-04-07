@@ -56,7 +56,7 @@ class Dec_model extends CI_Model
                         	inner join catalogos.regiones R on R.id_region = D.id_region
                         	left join dec.h_indicadores hi ON(hi.cve_presupuestal = UI.clave_presupuestal)
                         	left join catalogos.programas_proyecto pp ON(pp.id_programa_proyecto = hi.id_programa_proyecto)
-                        where UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']}
+                        where hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']}
                         group by pp.nombre, D.clave_delegacional, D.nombre , UI.nombre , pp.descripcion
                         order by UI.nombre");
                         $reporte = $resultado->result_array();
@@ -77,7 +77,7 @@ class Dec_model extends CI_Model
                           	inner join catalogos.regiones R on R.id_region = D.id_region
                           	left join dec.h_indicadores hi ON(hi.cve_presupuestal = UI.clave_presupuestal)
                           	left join catalogos.programas_proyecto pp ON(pp.id_programa_proyecto = hi.id_programa_proyecto)
-                          where UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_tipo_unidad = {$peticion['tipos_unidades']}
+                          where hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_tipo_unidad = {$peticion['tipos_unidades']}
                           group by pp.nombre, D.clave_delegacional, D.nombre , UI.nombre , pp.descripcion
                           order by UI.nombre");
                           $reporte = $resultado->result_array();
@@ -98,7 +98,7 @@ class Dec_model extends CI_Model
                               	inner join catalogos.regiones R on R.id_region = D.id_region
                               	left join dec.h_indicadores hi ON(hi.cve_presupuestal = UI.clave_presupuestal)
                               	left join catalogos.programas_proyecto pp ON(pp.id_programa_proyecto = hi.id_programa_proyecto)
-                              where UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_delegacion = {$peticion['delegacion']}
+                              where hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_delegacion = {$peticion['delegacion']}
                               group by pp.nombre, D.clave_delegacional, D.nombre , UI.nombre , pp.descripcion
                               order by UI.nombre");
                               $reporte = $resultado->result_array();
@@ -120,7 +120,7 @@ class Dec_model extends CI_Model
                                   	inner join catalogos.regiones R on R.id_region = D.id_region
                                   	left join dec.h_indicadores hi ON(hi.cve_presupuestal = UI.clave_presupuestal)
                                   	left join catalogos.programas_proyecto pp ON(pp.id_programa_proyecto = hi.id_programa_proyecto)
-                                  where UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and and R.id_region = {$peticion['region']}
+                                  where hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and and R.id_region = {$peticion['region']}
                                   group by pp.nombre, D.clave_delegacional, D.nombre , UI.nombre , pp.descripcion
                                   order by UI.nombre");
                                   $reporte = $resultado->result_array();
@@ -142,7 +142,7 @@ class Dec_model extends CI_Model
                                     	inner join catalogos.regiones R on R.id_region = D.id_region
                                     	left join dec.h_indicadores hi ON(hi.cve_presupuestal = UI.clave_presupuestal)
                                     	left join catalogos.programas_proyecto pp ON(pp.id_programa_proyecto = hi.id_programa_proyecto)
-                                    where UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and R.id_region = {$peticion['region']} and UI.id_tipo_unidad = {$peticion['tipos_unidades']}
+                                    where hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and R.id_region = {$peticion['region']} and UI.id_tipo_unidad = {$peticion['tipos_unidades']}
                                     group by pp.nombre, D.clave_delegacional, D.nombre , UI.nombre , pp.descripcion
                                     order by UI.nombre");
                                     $reporte = $resultado->result_array();
@@ -163,7 +163,7 @@ class Dec_model extends CI_Model
                                         	inner join catalogos.regiones R on R.id_region = D.id_region
                                         	left join dec.h_indicadores hi ON(hi.cve_presupuestal = UI.clave_presupuestal)
                                         	left join catalogos.programas_proyecto pp ON(pp.id_programa_proyecto = hi.id_programa_proyecto)
-                                        where UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and R.id_region = {$peticion['region']} and D.id_delegacion = {$peticion['delegacion']}
+                                        where hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and R.id_region = {$peticion['region']} and D.id_delegacion = {$peticion['delegacion']}
                                         group by pp.nombre, D.clave_delegacional, D.nombre , UI.nombre , pp.descripcion
                                         order by UI.nombre");
                                         $reporte = $resultado->result_array();
@@ -185,7 +185,7 @@ class Dec_model extends CI_Model
                                             	inner join catalogos.regiones R on R.id_region = D.id_region
                                             	left join dec.h_indicadores hi ON(hi.cve_presupuestal = UI.clave_presupuestal)
                                             	left join catalogos.programas_proyecto pp ON(pp.id_programa_proyecto = hi.id_programa_proyecto)
-                                            where UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and D.id_delegacion = {$peticion['delegacion']} and UI.id_tipo_unidad = {$peticion['tipos_unidades']}
+                                            where hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and D.id_delegacion = {$peticion['delegacion']} and UI.id_tipo_unidad = {$peticion['tipos_unidades']}
                                             group by pp.nombre, D.clave_delegacional, D.nombre , UI.nombre , pp.descripcion
                                             order by UI.nombre");
                                             $reporte = $resultado->result_array();
@@ -204,7 +204,7 @@ class Dec_model extends CI_Model
                                             	inner join catalogos.regiones R on R.id_region = D.id_region
                                             	left join dec.h_indicadores hi ON(hi.cve_presupuestal = UI.clave_presupuestal)
                                             	left join catalogos.programas_proyecto pp ON(pp.id_programa_proyecto = hi.id_programa_proyecto)
-                                            where UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and D.id_delegacion = {$peticion['delegacion']} and UI.id_tipo_unidad = {$peticion['tipos_unidades']} and R.id_region = {$peticion['region']}
+                                            where hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and D.id_delegacion = {$peticion['delegacion']} and UI.id_tipo_unidad = {$peticion['tipos_unidades']} and R.id_region = {$peticion['region']}
                                             group by pp.nombre, D.clave_delegacional, D.nombre , UI.nombre , pp.descripcion
                                             order by UI.nombre");
                                             $reporte = $resultado->result_array();
@@ -235,7 +235,7 @@ class Dec_model extends CI_Model
                         	inner join catalogos.regiones R on R.id_region = D.id_region
                         	left join dec.h_indicadores hi ON(hi.cve_presupuestal = UI.clave_presupuestal)
                         	left join catalogos.programas_proyecto pp ON(pp.id_programa_proyecto = hi.id_programa_proyecto)
-                        where UI.anio = 2017 and UI.nivel_atencion = 3
+                        where hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = 3
                         group by pp.nombre, D.clave_delegacional, D.nombre , UI.nombre , pp.descripcion
                         order by UI.nombre");
                         $reporte = $resultado->result_array();
@@ -253,7 +253,7 @@ class Dec_model extends CI_Model
                         	inner join catalogos.regiones R on R.id_region = D.id_region
                         	left join dec.h_indicadores hi ON(hi.cve_presupuestal = UI.clave_presupuestal)
                         	left join catalogos.programas_proyecto pp ON(pp.id_programa_proyecto = hi.id_programa_proyecto)
-                        where UI.anio = 2017 and UI.nivel_atencion = 3 and id_tipo_unidad = {$peticion['tipos_unidades']}
+                        where hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = 3 and id_tipo_unidad = {$peticion['tipos_unidades']}
                         group by pp.nombre, D.clave_delegacional, D.nombre , UI.nombre , pp.descripcion
                         order by UI.nombre");
                         $reporte = $resultado->result_array();
@@ -455,19 +455,13 @@ class Dec_model extends CI_Model
                 case 'delegacion':
                     if($peticion['region'] == "Todos" && $peticion['delegacion'] == "Todos" && $peticion['tipos_unidades'] == "Todos")
                     {
-                        $resultado = $this->db->query("select count(distinct IPT.unidad) total_unidades from (select D.clave_delegacional, D.nombre delegacion, UI.nombre unidad, pp.descripcion,
-                        	sum(hi.numerador) as numerador,
-                        	sum(hi.denominador) as denominador,
-                        round((sum(hi.numerador::numeric) / nullif(sum(hi.denominador::numeric),0))*100,2) porcentaje
+                        $resultado = $this->db->query("select UI.id_delegacion, count(distinct hi.cve_presupuestal) total_unidades
                         from catalogos.unidades_instituto UI
-                        	inner join catalogos.delegaciones D on D.id_delegacion = UI.id_delegacion
-                        	inner join catalogos.regiones R on R.id_region = D.id_region
                         	left join dec.h_indicadores hi ON(hi.cve_presupuestal = UI.clave_presupuestal)
                         	left join catalogos.programas_proyecto pp ON(pp.id_programa_proyecto = hi.id_programa_proyecto)
-                        where UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']}
-                        group by D.clave_delegacional, D.nombre , UI.nombre , pp.descripcion
-                        order by 1,2,3,4) IPT
-                        where IPT.numerador > 0");
+                        where hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']}
+                        group by hi.cve_presupuestal, UI.id_delegacion
+                        having sum(hi.numerador) > 0");
                         $reporte = $resultado->result_array();
                         $estado['success'] = true;
                         $estado['message'] = "Se obtuvo el reporte con exito";
@@ -477,19 +471,13 @@ class Dec_model extends CI_Model
                     {
                       if($peticion['region'] == "Todos" && $peticion['delegacion'] == "Todos")
                       {
-                          $resultado = $this->db->query("select count(distinct IPT.unidad) total_unidades from (select D.clave_delegacional, D.nombre delegacion, UI.nombre unidad, pp.descripcion,
-                          	sum(hi.numerador) as numerador,
-                          	sum(hi.denominador) as denominador,
-                          round((sum(hi.numerador::numeric) / nullif(sum(hi.denominador::numeric),0))*100,2) porcentaje
+                          $resultado = $this->db->query("select UI.id_delegacion, count(distinct hi.cve_presupuestal) total_unidades
                           from catalogos.unidades_instituto UI
-                          	inner join catalogos.delegaciones D on D.id_delegacion = UI.id_delegacion
-                          	inner join catalogos.regiones R on R.id_region = D.id_region
                           	left join dec.h_indicadores hi ON(hi.cve_presupuestal = UI.clave_presupuestal)
                           	left join catalogos.programas_proyecto pp ON(pp.id_programa_proyecto = hi.id_programa_proyecto)
-                          where UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_tipo_unidad = {$peticion['tipos_unidades']}
-                          group by D.clave_delegacional, D.nombre , UI.nombre , pp.descripcion
-                          order by 1,2,3,4) IPT
-                          where IPT.numerador > 0");
+                          where hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_tipo_unidad = {$peticion['tipos_unidades']}
+                          group by hi.cve_presupuestal, UI.id_delegacion
+                          having sum(hi.numerador) > 0");
                           $reporte = $resultado->result_array();
                           $estado['success'] = true;
                           $estado['message'] = "Se obtuvo el reporte con exito";
@@ -499,19 +487,13 @@ class Dec_model extends CI_Model
                       {
                           if($peticion['region'] == "Todos" && $peticion['tipos_unidades'] == "Todos")
                           {
-                              $resultado = $this->db->query("select count(distinct IPT.unidad) total_unidades from (select D.clave_delegacional, D.nombre delegacion, UI.nombre unidad, pp.descripcion,
-                              	sum(hi.numerador) as numerador,
-                              	sum(hi.denominador) as denominador,
-                              round((sum(hi.numerador::numeric) / nullif(sum(hi.denominador::numeric),0))*100,2) porcentaje
+                              $resultado = $this->db->query("select UI.id_delegacion, count(distinct hi.cve_presupuestal) total_unidades
                               from catalogos.unidades_instituto UI
-                              	inner join catalogos.delegaciones D on D.id_delegacion = UI.id_delegacion
-                              	inner join catalogos.regiones R on R.id_region = D.id_region
                               	left join dec.h_indicadores hi ON(hi.cve_presupuestal = UI.clave_presupuestal)
                               	left join catalogos.programas_proyecto pp ON(pp.id_programa_proyecto = hi.id_programa_proyecto)
-                              where UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_delegacion = {$peticion['id_delegacion']}
-                              group by D.clave_delegacional, D.nombre , UI.nombre , pp.descripcion
-                              order by 1,2,3,4) IPT
-                              where IPT.numerador > 0");
+                              where hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_delegacion = {$peticion['id_delegacion']}
+                              group by hi.cve_presupuestal, UI.id_delegacion
+                              having sum(hi.numerador) > 0");
                               $reporte = $resultado->result_array();
                               $estado['success'] = true;
                               $estado['message'] = "Se obtuvo el reporte con exito";
@@ -522,19 +504,13 @@ class Dec_model extends CI_Model
                           {
                               if($peticion['delegacion'] == "Todos" && $peticion['tipos_unidades'] == "Todos")
                               {
-                                  $resultado = $this->db->query("select count(distinct IPT.unidad) total_unidades from (select D.clave_delegacional, D.nombre delegacion, UI.nombre unidad, pp.descripcion,
-                                  	sum(hi.numerador) as numerador,
-                                  	sum(hi.denominador) as denominador,
-                                  round((sum(hi.numerador::numeric) / nullif(sum(hi.denominador::numeric),0))*100,2) porcentaje
+                                  $resultado = $this->db->query("select UI.id_delegacion, count(distinct hi.cve_presupuestal) total_unidades
                                   from catalogos.unidades_instituto UI
-                                  	inner join catalogos.delegaciones D on D.id_delegacion = UI.id_delegacion
-                                  	inner join catalogos.regiones R on R.id_region = D.id_region
                                   	left join dec.h_indicadores hi ON(hi.cve_presupuestal = UI.clave_presupuestal)
                                   	left join catalogos.programas_proyecto pp ON(pp.id_programa_proyecto = hi.id_programa_proyecto)
-                                  where UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_region = {$peticion['id_region']}
-                                  group by D.clave_delegacional, D.nombre , UI.nombre , pp.descripcion
-                                  order by 1,2,3,4) IPT
-                                  where IPT.numerador > 0");
+                                  where hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_region = {$peticion['id_region']}
+                                  group by hi.cve_presupuestal, UI.id_delegacion
+                                  having sum(hi.numerador) > 0");
                                   $reporte = $resultado->result_array();
                                   $estado['success'] = true;
                                   $estado['message'] = "Se obtuvo el reporte con exito";
@@ -544,19 +520,13 @@ class Dec_model extends CI_Model
                               {
                                 if($peticion['delegacion'] == "Todos")
                                 {
-                                    $resultado = $this->db->query("select count(distinct IPT.unidad) total_unidades from (select D.clave_delegacional, D.nombre delegacion, UI.nombre unidad, pp.descripcion,
-                                    	sum(hi.numerador) as numerador,
-                                    	sum(hi.denominador) as denominador,
-                                    round((sum(hi.numerador::numeric) / nullif(sum(hi.denominador::numeric),0))*100,2) porcentaje
+                                    $resultado = $this->db->query("select UI.id_delegacion, count(distinct hi.cve_presupuestal) total_unidades
                                     from catalogos.unidades_instituto UI
-                                    	inner join catalogos.delegaciones D on D.id_delegacion = UI.id_delegacion
-                                    	inner join catalogos.regiones R on R.id_region = D.id_region
                                     	left join dec.h_indicadores hi ON(hi.cve_presupuestal = UI.clave_presupuestal)
                                     	left join catalogos.programas_proyecto pp ON(pp.id_programa_proyecto = hi.id_programa_proyecto)
-                                    where UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_region = {$peticion['region']} and UI.id_tipo_unidad = {$peticion['tipos_unidades']}
-                                    group by D.clave_delegacional, D.nombre , UI.nombre , pp.descripcion
-                                    order by 1,2,3,4) IPT
-                                    where IPT.numerador > 0");
+                                    where hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_region = {$peticion['region']} and UI.id_tipo_unidad = {$peticion['tipos_unidades']}
+                                    group by hi.cve_presupuestal, UI.id_delegacion
+                                    having sum(hi.numerador) > 0");
                                     $reporte = $resultado->result_array();
                                     $estado['success'] = true;
                                     $estado['message'] = "Se obtuvo el reporte con exito";
@@ -566,41 +536,30 @@ class Dec_model extends CI_Model
                                 {
                                     if($peticion['tipos_unidades'] == "Todos")
                                     {
-                                        $resultado = $this->db->query("select count(distinct IPT.unidad) total_unidades from (select D.clave_delegacional, D.nombre delegacion, UI.nombre unidad, pp.descripcion,
-                                        	sum(hi.numerador) as numerador,
-                                        	sum(hi.denominador) as denominador,
-                                        round((sum(hi.numerador::numeric) / nullif(sum(hi.denominador::numeric),0))*100,2) porcentaje
+                                        $resultado = $this->db->query("select UI.id_delegacion, count(distinct hi.cve_presupuestal) total_unidades
                                         from catalogos.unidades_instituto UI
-                                        	inner join catalogos.delegaciones D on D.id_delegacion = UI.id_delegacion
-                                        	inner join catalogos.regiones R on R.id_region = D.id_region
                                         	left join dec.h_indicadores hi ON(hi.cve_presupuestal = UI.clave_presupuestal)
                                         	left join catalogos.programas_proyecto pp ON(pp.id_programa_proyecto = hi.id_programa_proyecto)
-                                        where UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_region = {$peticion['region']} and UI.id_delegacion = {$peticion['delegacion']}
-                                        group by D.clave_delegacional, D.nombre , UI.nombre , pp.descripcion
-                                        order by 1,2,3,4) IPT
-                                        where IPT.numerador > 0");
+                                        where hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_region = {$peticion['region']} and UI.id_delegacion = {$peticion['delegacion']}
+                                        group by hi.cve_presupuestal, UI.id_delegacion
+                                        having sum(hi.numerador) > 0");
                                         $reporte = $resultado->result_array();
                                         $estado['success'] = true;
                                         $estado['message'] = "Se obtuvo el reporte con exito";
                                         $estado['datos'] = $reporte;
+                                        //
                                     }
                                     else
                                     {
                                         if($peticion['region'] == "Todos")
                                         {
-                                            $resultado = $this->db->query("select count(distinct IPT.unidad) total_unidades from (select D.clave_delegacional, D.nombre delegacion, UI.nombre unidad, pp.descripcion,
-                                            	sum(hi.numerador) as numerador,
-                                            	sum(hi.denominador) as denominador,
-                                            round((sum(hi.numerador::numeric) / nullif(sum(hi.denominador::numeric),0))*100,2) porcentaje
+                                            $resultado = $this->db->query("select UI.id_delegacion, count(distinct hi.cve_presupuestal) total_unidades
                                             from catalogos.unidades_instituto UI
-                                            	inner join catalogos.delegaciones D on D.id_delegacion = UI.id_delegacion
-                                            	inner join catalogos.regiones R on R.id_region = D.id_region
                                             	left join dec.h_indicadores hi ON(hi.cve_presupuestal = UI.clave_presupuestal)
                                             	left join catalogos.programas_proyecto pp ON(pp.id_programa_proyecto = hi.id_programa_proyecto)
-                                            where UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_tipo_unidad = {$peticion['tipos_unidades']} and UI.id_delegacion = {$peticion['delegacion']}
-                                            group by D.clave_delegacional, D.nombre , UI.nombre , pp.descripcion
-                                            order by 1,2,3,4) IPT
-                                            where IPT.numerador > 0");
+                                            where hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_tipo_unidad = {$peticion['tipos_unidades']} and UI.id_delegacion = {$peticion['delegacion']}
+                                            group by hi.cve_presupuestal, UI.id_delegacion
+                                            having sum(hi.numerador) > 0");
                                             $reporte = $resultado->result_array();
                                             $estado['success'] = true;
                                             $estado['message'] = "Se obtuvo el reporte con exito";
@@ -608,19 +567,13 @@ class Dec_model extends CI_Model
                                         }
                                         else
                                         {
-                                            $resultado = $this->db->query("select count(distinct IPT.unidad) total_unidades from (select D.clave_delegacional, D.nombre delegacion, UI.nombre unidad, pp.descripcion,
-                                            	sum(hi.numerador) as numerador,
-                                            	sum(hi.denominador) as denominador,
-                                            round((sum(hi.numerador::numeric) / nullif(sum(hi.denominador::numeric),0))*100,2) porcentaje
+                                            $resultado = $this->db->query("select UI.id_delegacion, count(distinct hi.cve_presupuestal) total_unidades
                                             from catalogos.unidades_instituto UI
-                                            	inner join catalogos.delegaciones D on D.id_delegacion = UI.id_delegacion
-                                            	inner join catalogos.regiones R on R.id_region = D.id_region
                                             	left join dec.h_indicadores hi ON(hi.cve_presupuestal = UI.clave_presupuestal)
                                             	left join catalogos.programas_proyecto pp ON(pp.id_programa_proyecto = hi.id_programa_proyecto)
-                                            where UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_region = {$peticion['region']} and UI.id_tipo_unidad = {$peticion['tipos_unidades']} and UI.id_delegacion = {$peticion['delegacion']}
-                                            group by D.clave_delegacional, D.nombre , UI.nombre , pp.descripcion
-                                            order by 1,2,3,4) IPT
-                                            where IPT.numerador > 0");
+                                            where hi.anio = 2017 and UI.anio = 2017 and UI.nivel_atencion = {$peticion['nivel']} and UI.id_region = {$peticion['region']} and UI.id_tipo_unidad = {$peticion['tipos_unidades']} and UI.id_delegacion = {$peticion['delegacion']}
+                                            group by hi.cve_presupuestal, UI.id_delegacion
+                                            having sum(hi.numerador) > 0");
                                             $reporte = $resultado->result_array();
                                             $estado['success'] = true;
                                             $estado['message'] = "Se obtuvo el reporte con exito";
