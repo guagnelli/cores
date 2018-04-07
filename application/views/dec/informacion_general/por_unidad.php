@@ -35,6 +35,7 @@
                                             'class' => 'form-control  form-control input-sm',
                                             'data-toggle' => 'tooltip',
                                             'data-placement' => 'top',
+                                            'required' => null,
                                             'title' => 'tipos_unidades')
                                     )
                             );
