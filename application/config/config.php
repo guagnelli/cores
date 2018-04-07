@@ -24,7 +24,7 @@ define('APP_URL', ($_SERVER['SERVER_PORT'] == 443 ? 'https' : 'http') . "://{$_S
 |
 */
 //$config['base_url'] = APP_URL; //Asigna automaticamente la ruta 
-$config['base_url'] = 'http://11.32.41.238:9000/2018/cores_pro/'; //Asigna automaticamente la ruta 
+$config['base_url'] = 'http://localhost:8080/cores2/'; //Asigna automaticamente la ruta 
 
 /*
 |--------------------------------------------------------------------------

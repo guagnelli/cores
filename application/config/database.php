@@ -74,13 +74,13 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'	=> 'pgsql:host=11.32.41.13;dbname=cores_pro_test;port=5433',
-	'hostname' => '11.32.41.13',
-	'username' => 'innovaedu',
-	'password' => 'nPgEoXCqd/?gV.,',
-	'database' => 'cores_pro_test',
+	'dsn'	=> 'pgsql:host=localhost;dbname=cores;port=5432',
+	'hostname' => 'localhost',
+	'username' => 'postgres',
+	'password' => 'postgres',
+	'database' => 'cores',
 	'dbdriver' => 'pdo',
-	'port' => '5433',
+	'port' => '5432',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
