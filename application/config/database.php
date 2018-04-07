@@ -89,7 +89,7 @@ $db['default'] = array(
 	'char_set' => 'utf8',
 	'dbcollat' => 'utf8_general_ci',
 	'swap_pre' => '',
-	'schema' => 'sistema,catalogos',
+	'schema' => 'sistema,catalogos,dec',
 	'encrypt' => FALSE,
 	'compress' => FALSE,
 	'stricton' => FALSE,
@@ -119,4 +119,3 @@ $db['default_pre'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
-
