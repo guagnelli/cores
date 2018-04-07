@@ -1,0 +1,184 @@
+.card .card-header.card-header-icon {
+    float: left;
+}
+.card .card-header.card-header-icon i {
+    width: 33px;
+    height: 33px;
+    text-align: center;
+    line-height: 33px;
+}
+
+.card .card-header.card-header-icon + .card-content .card-title {
+    padding-bottom: 15px;
+}
+
+.label {
+
+    border-radius: 12px;
+    padding: 5px 12px;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+.label, .label.label-default {
+    background-color: #FFFFFF;
+}
+.label.label-inverse {
+    background-color: #212121;
+}
+.label.label-primary {
+    background-color: #9c27b0;
+}
+.label.label-success {
+    background-color: #4caf50;
+}
+.label.label-info {
+    background-color: #0090b9;
+}
+.label.label-warning {
+    background-color: #ff9800;
+}
+.label.label-danger {
+    background-color: #f44336;
+}
+.label.label-rose {
+    background-color: #e91e63;
+}
+
+/* cambios de chris solicitados por ley */
+.control-label{
+    font-size: 14px  !important;
+}
+
+.form-group-sm .form-control{
+    font-size: 14px  !important;
+}
+
+.form-group .form-control{
+    font-size: 14px  !important;
+}
+
+label.col-form-label{
+    color: white;
+}
+
+.btn.btn-primary, .btn.btn-primary:hover, .btn.btn-primary:focus, .btn.btn-primary:active, .btn.btn-primary.active, .btn.btn-primary:active:focus, .btn.btn-primary:active:hover, .btn.btn-primary.active:focus, .btn.btn-primary.active:hover, .open > .btn.btn-primary.dropdown-toggle, .open > .btn.btn-primary.dropdown-toggle:focus, .open > .btn.btn-primary.dropdown-toggle:hover, .navbar .navbar-nav > li > a.btn.btn-primary, .navbar .navbar-nav > li > a.btn.btn-primary:hover, .navbar .navbar-nav > li > a.btn.btn-primary:focus, .navbar .navbar-nav > li > a.btn.btn-primary:active, .navbar .navbar-nav > li > a.btn.btn-primary.active, .navbar .navbar-nav > li > a.btn.btn-primary:active:focus, .navbar .navbar-nav > li > a.btn.btn-primary:active:hover, .navbar .navbar-nav > li > a.btn.btn-primary.active:focus, .navbar .navbar-nav > li > a.btn.btn-primary.active:hover, .open > .navbar .navbar-nav > li > a.btn.btn-primary.dropdown-toggle, .open > .navbar .navbar-nav > li > a.btn.btn-primary.dropdown-toggle:focus, .open > .navbar .navbar-nav > li > a.btn.btn-primary.dropdown-toggle:hover{
+    background-color: #009c9b;
+}
+
+a.link_ficha_usuario:hover{
+    background-color: #009c9b !important;
+}
+
+li .li-autocomplete:before {
+    color: #555;
+    content: '\f0f8';
+    font-family: FontAwesome;
+    margin-left: 0px;
+    padding-right: 3px;
+    color: #734e97;
+}
+
+.autocomplete_unidad:hover{
+    margin-bottom-color:red;
+    cursor:hand;
+    text-decoration: underline;
+    color:#734e97;
+}
+
+.ul-autocomplete{
+    background: #ddd;
+    margin-top: -7px;
+}
+
+a {
+  color: #999999;
+}
+a:hover, a:focus {
+  color: #999999;
+  text-decoration: none;
+}
+
+.card [data-background-color="green"] {
+  background: linear-gradient(60deg, #009c9b, #009c9b);
+
+}
+
+.sidebar[data-color="green"] .nav li.active a,
+.off-canvas-sidebar[data-color="green"] .nav li.active a {
+  background-color: #009c9b;
+
+}
+
+.card .card-header {
+  margin: -20px 15px 0;
+  border-radius: 3px;
+  padding: 15px;
+  background-color: #999999;
+  box-shadow: initial;
+}
+
+.form-control,
+.form-group .form-control {
+  background-image: linear-gradient(#009c9b, #009c9b), linear-gradient(#D2D2D2, #D2D2D2) !important;
+}
+
+.dropdown-menu li a:hover,
+.dropdown-menu li a:focus,
+.dropdown-menu li a:active {
+  background-color: #009c9b !important;
+  color: #FFFFFF;
+  box-shadow: none;
+}
+
+.navbar .dropdown-menu li a:hover,
+.navbar .dropdown-menu li a:focus,
+.navbar .dropdown-menu li a:active, .navbar.navbar-default .dropdown-menu li a:hover,
+.navbar.navbar-default .dropdown-menu li a:focus,
+.navbar.navbar-default .dropdown-menu li a:active {
+  box-shadow: none;
+}
+
+.btn.btn-primary:focus, .btn.btn-primary:active, .btn.btn-primary:hover,
+.navbar .navbar-nav > li > a.btn.btn-primary:focus,
+.navbar .navbar-nav > li > a.btn.btn-primary:active,
+.navbar .navbar-nav > li > a.btn.btn-primary:hover {
+  box-shadow: none;
+}
+
+.text-primary {
+  color: #999999;
+}
+
+.current_comparativa_region{
+    background-color:  #e2e2e2;
+}
+
+.cores-logo{
+    height: 100px;
+    margin-left: 10px;
+}
+
+.main-panel > .content{
+    padding-top: 50px;
+}
+
+.cores-helper:hover{
+    cursor: pointer;
+    color: grey;
+}
+
+
+.form-group input[type=file] {
+  opacity: initial;
+  position: initial;
+  top: initial;
+}
+
+.groceryCrudTable tfoot tr th input[type="text"], .datatables div.form-div input[type="text"]{
+    height: 30px !important;
+}
+
+.adress-align{
+  text-align: center;
+}
