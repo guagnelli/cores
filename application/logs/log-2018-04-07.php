@@ -42,3 +42,36 @@ HINT:  Perhaps you meant to reference the column "ui.clave_presupuestal". - Inva
                                             where IPT.numerador > 0
 ERROR - 2018-04-07 09:35:38 --> Could not find the language line "index"
 ERROR - 2018-04-07 09:35:38 --> Severity: Warning --> Division by zero /Applications/mappstack/apache2/htdocs/cores2/application/controllers/Dec.php 118
+ERROR - 2018-04-07 09:45:33 --> Could not find the language line "index"
+ERROR - 2018-04-07 09:49:32 --> Could not find the language line "index"
+ERROR - 2018-04-07 10:07:59 --> Could not find the language line "index"
+ERROR - 2018-04-07 10:07:59 --> Severity: Notice --> Array to string conversion /Applications/mappstack/apache2/htdocs/cores2/application/models/Dec_model.php 287
+ERROR - 2018-04-07 10:08:30 --> Could not find the language line "index"
+ERROR - 2018-04-07 10:55:53 --> Could not find the language line "index"
+ERROR - 2018-04-07 10:55:53 --> Severity: Notice --> Undefined index: id_delegacion /Applications/mappstack/apache2/htdocs/cores2/application/models/Dec_model.php 328
+ERROR - 2018-04-07 10:55:53 --> Query error: ERROR:  syntax error at or near ")"
+LINE 3: ...= 2017 and UI.nivel_atencion = 2 and UI.id_delegacion = ) TU
+                                                                   ^ - Invalid query: select count(TU) total_unidades from
+                              (select * from catalogos.unidades_instituto UI
+                              where UI.anio = 2017 and UI.nivel_atencion = 2 and UI.id_delegacion = ) TU
+ERROR - 2018-04-07 10:56:30 --> Could not find the language line "index"
+ERROR - 2018-04-07 10:56:30 --> Severity: Notice --> Undefined index: id_delegacion /Applications/mappstack/apache2/htdocs/cores2/application/models/Dec_model.php 328
+ERROR - 2018-04-07 10:56:30 --> Query error: ERROR:  syntax error at or near ")"
+LINE 3: ...= 2017 and UI.nivel_atencion = 2 and UI.id_delegacion = ) TU
+                                                                   ^ - Invalid query: select count(TU) total_unidades from
+                              (select * from catalogos.unidades_instituto UI
+                              where UI.anio = 2017 and UI.nivel_atencion = 2 and UI.id_delegacion = ) TU
+ERROR - 2018-04-07 10:56:33 --> Could not find the language line "index"
+ERROR - 2018-04-07 10:56:33 --> Severity: Notice --> Undefined variable: filtros /Applications/mappstack/apache2/htdocs/cores2/application/views/dec/informacion_general/por_delegacion.php 314
+ERROR - 2018-04-07 10:56:46 --> Could not find the language line "index"
+ERROR - 2018-04-07 10:57:04 --> Could not find the language line "index"
+ERROR - 2018-04-07 10:58:23 --> Could not find the language line "index"
+ERROR - 2018-04-07 11:01:50 --> Could not find the language line "index"
+ERROR - 2018-04-07 11:09:04 --> Could not find the language line "index"
+ERROR - 2018-04-07 11:09:12 --> Could not find the language line "index"
+ERROR - 2018-04-07 11:26:51 --> Could not find the language line "index"
+ERROR - 2018-04-07 11:27:21 --> Could not find the language line "index"
+ERROR - 2018-04-07 11:28:16 --> Could not find the language line "index"
+ERROR - 2018-04-07 11:34:46 --> Could not find the language line "index"
+ERROR - 2018-04-07 11:34:46 --> Severity: Notice --> Undefined variable: filtros /Applications/mappstack/apache2/htdocs/cores2/application/views/dec/informacion_general/por_delegacion.php 314
+ERROR - 2018-04-07 11:35:08 --> Could not find the language line "index"
